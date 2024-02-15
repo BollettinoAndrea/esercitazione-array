@@ -1,0 +1,2 @@
+# esercitazione-array
+bho
