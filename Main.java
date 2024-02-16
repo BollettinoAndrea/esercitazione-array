@@ -15,6 +15,7 @@ public class Main {
             System.out.println("3.visualizzazione.");
             System.out.println("4.inserimento in posizione.");
             System.out.println("5.cancellazione di un elemento cercato.");
+            System.out.println("6.cancellazione di tutte le occorrenze di un elemento cercato.");
             System.out.println("0.esci dal programma.");
 
             //vai a capo
@@ -101,6 +102,31 @@ public class Main {
                     }
                     if (!trovato) {
                         System.out.println("Elemento non trovato.");
+                    }
+                    break;
+
+//----------------------------------------------------------------------------------------------------------------------
+
+                case 6: //cancellazione di tutte le occorrenze
+                    System.out.print("Inserisci l'elemento da cancellare: ");
+                    int CancElemento_ = in.nextInt();
+                    int i = 0;
+                    boolean trova = false;
+                    while (i < conta) {
+                        if (array[i] == CancElemento_) {
+                            for (int j = i; j < conta - 1; j++) {
+                                array[j] = array[j + 1];
+                            }
+                            conta--;
+                            trova = true;
+                        } else {
+                            i++;
+                        }
+                    }
+                    if (trova) {
+                        System.out.println("tutte le occorrenze dell'elemento sono state cancellate.");
+                    } else {
+                        System.out.println("elemento non trovato.");
                     }
                     break;
 
